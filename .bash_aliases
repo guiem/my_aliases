@@ -2,7 +2,10 @@
 alias hello_world='echo Hello Wooorld!'
 
 # Go to my workspace
-alias wp='cd ~/Documents/workspace'
+alias ws='cd ~/Documents/workspace'
+
+# Go to my Dropbox
+alias db='cd ~/Dropbox'
 
 # Activate virtualenv
 myenv() {
@@ -12,4 +15,9 @@ myenv() {
 # Django runserver
 mydjango() {
     python manage.py runserver $1;
+}
+
+# Coverall django
+mycoverage() {
+    coverage run --source=$1 manage.py test;
 }
